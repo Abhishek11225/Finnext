@@ -182,7 +182,7 @@ Ensure you have [Node.js v18+](https://nodejs.org/) and a running [MongoDB](http
 
 ### **1. Clone the repository**
 ```bash
-git clone https://github.com/KANISHQ09/Finance.git
+git clone https://github.com/Abhishek11225/Finnext.git
 cd Finance
 ```
 
