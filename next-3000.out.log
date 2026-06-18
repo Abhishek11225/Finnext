@@ -1,0 +1,64 @@
+   ▲ Next.js 15.5.9 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.56.1:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Compiled middleware in 203ms
+ ✓ Ready in 1837ms
+ ○ Compiling / ...
+ ✓ Compiled / in 9.7s
+Connected to database development - mongodb+srv://kanishq:kanishqAbhi@cluster0.iskcfat.mongodb.net/?appName=Cluster0
+ GET / 200 in 12546ms
+ ○ Compiling /api/alerts ...
+ ✓ Compiled /api/alerts in 1188ms
+ GET /api/alerts 200 in 2183ms
+ ○ Compiling /sign-in ...
+ ✓ Compiled /sign-in in 999ms
+ GET /sign-in 200 in 1293ms
+ ○ Compiling /academy ...
+ ✓ Compiled /academy in 1280ms
+ GET /academy 200 in 1581ms
+ ○ Compiling /api/academy ...
+ GET /api/alerts 200 in 915ms
+ ✓ Compiled /api/academy in 894ms
+ GET /api/academy 200 in 1505ms
+ GET /api/academy 200 in 1794ms
+ GET /api/alerts 200 in 594ms
+ GET /api/alerts 200 in 541ms
+ ○ Compiling /api/academy/assistant ...
+ ✓ Compiled /api/academy/assistant in 637ms
+ POST /api/academy/assistant 200 in 4504ms
+ GET /api/alerts 200 in 528ms
+ GET /sign-in 200 in 473ms
+ POST /api/academy/assistant 200 in 1683ms
+ GET /api/alerts 200 in 546ms
+ GET /api/alerts 200 in 532ms
+ GET /api/alerts 200 in 617ms
+ POST /api/academy/assistant 200 in 3439ms
+ GET /api/alerts 200 in 547ms
+ POST /api/academy/assistant 200 in 1817ms
+ GET /api/alerts 200 in 543ms
+ GET /api/alerts 200 in 503ms
+ GET /api/alerts 200 in 511ms
+ GET /api/alerts 200 in 511ms
+ GET /api/alerts 200 in 558ms
+ GET /api/alerts 200 in 607ms
+ GET /api/alerts 200 in 577ms
+ GET /api/alerts 200 in 511ms
+ GET /api/alerts 200 in 501ms
+ GET /api/alerts 200 in 534ms
+ GET /api/alerts 200 in 510ms
+ GET /api/alerts 200 in 504ms
+ GET /api/alerts 200 in 528ms
+ GET /api/alerts 200 in 513ms
+ GET /api/alerts 200 in 493ms
+ GET /api/alerts 200 in 483ms
+ GET /api/alerts 200 in 494ms
+ GET /api/alerts 200 in 525ms
+ GET /api/alerts 200 in 520ms
+ GET /api/alerts 200 in 466ms
+ ✓ Compiled in 252ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.5s
+[?25h

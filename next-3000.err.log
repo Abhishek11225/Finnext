@@ -1,0 +1,240 @@
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\server\app\api\alerts\[__metadata_id__]\route\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\server\\app\\api\\alerts\\[__metadata_id__]\\route\\app-paths-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.ofjjcw5ithj'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.ofjjcw5ithj'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\server\app\api\alerts\[__metadata_id__]\route\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\server\\app\\api\\alerts\\[__metadata_id__]\\route\\app-paths-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.8k86dj24vx7'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.8k86dj24vx7'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.ue3zls8cd7'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.ue3zls8cd7'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.7wstms223am'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.7wstms223am'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.1lkfj3ht6nj'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.1lkfj3ht6nj'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.7wstms223am'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.7wstms223am'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.n5y72hpquj'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.n5y72hpquj'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.sfzgzq7ryp'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.sfzgzq7ryp'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.c8nqu57rk8s'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.c8nqu57rk8s'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.md02z8vvnt'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.md02z8vvnt'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.c8nqu57rk8s'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.c8nqu57rk8s'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.ptxp429op5t'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.ptxp429op5t'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.4618ci6r938'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.4618ci6r938'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.y0lh78r55ql'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.y0lh78r55ql'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.5fg16w1v9vr'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.5fg16w1v9vr'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.y0lh78r55ql'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.y0lh78r55ql'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.kz3ysbewzv'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.kz3ysbewzv'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.94el7fspzja'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.94el7fspzja'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.9vnxph0rvkl'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.9vnxph0rvkl'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.tdfxk7i4qg'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.tdfxk7i4qg'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.9vnxph0rvkl'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.9vnxph0rvkl'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.s7esxwg87a'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.s7esxwg87a'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.c3e3upurwr6'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.c3e3upurwr6'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.0ckvbjw5157o'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.0ckvbjw5157o'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.u95cu8sl9hs'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.u95cu8sl9hs'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.0ckvbjw5157o'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.0ckvbjw5157o'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.y983nf0tf2'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.y983nf0tf2'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.fv7vegre5ua'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.fv7vegre5ua'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.bcqx2i8vk0e'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.bcqx2i8vk0e'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.izaq61imgk8'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.izaq61imgk8'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.bcqx2i8vk0e'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.bcqx2i8vk0e'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.r3y6ccur4b'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.r3y6ccur4b'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.slkpdg03zzi'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.slkpdg03zzi'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.ltez1m60z1m'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.ltez1m60z1m'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.0hk0eodg6w6s'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.0hk0eodg6w6s'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.ltez1m60z1m'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.ltez1m60z1m'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.sjs1g1o6cm'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.sjs1g1o6cm'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Finance-main\.next\static\development\_buildManifest.js.tmp.fdxohi8rsdt'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Finance-main\\.next\\static\\development\\_buildManifest.js.tmp.fdxohi8rsdt'
+}
