@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function SandboxPage() {
   return (
-    <main className="sandbox-container">
+    <div className="sandbox-container">
       {/* Header */}
       <div className="sandbox-header">
         <div className="sandbox-header-icon">
@@ -34,6 +34,6 @@ export default function SandboxPage() {
       </div>
 
       <SandboxDashboard />
-    </main>
+    </div>
   );
 }

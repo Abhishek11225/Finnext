@@ -9,7 +9,6 @@ import {
     TableRow,
 } from '@/components/ui/table'; // Assumed Shadcn Table components
 import { WATCHLIST_TABLE_HEADER } from '@/lib/constants';
-import { Button } from './ui/button';
 import WatchlistButton from './WatchlistButton';
 import { StockAlertButton } from './StockAlertButton';
 import { useRouter } from 'next/navigation';

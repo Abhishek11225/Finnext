@@ -4,7 +4,7 @@ import {
   addToWatchlist,
   removeFromWatchlist,
 } from '@/lib/actions/watchlist.actions';
-import { Star, StarIcon, Stars, Trash2 } from 'lucide-react';
+import { Star, Trash2 } from 'lucide-react';
 import React, { useMemo, useState } from 'react';
 import { toast } from 'sonner';
 

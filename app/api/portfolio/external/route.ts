@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/database/mongoose";
 import { ExternalPortfolio } from "@/database/models/ExternalPortfolio";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 
 async function getSession(req: NextRequest) {
+  const auth = await getAuth();
   return auth.api.getSession({ headers: req.headers });
 }
 

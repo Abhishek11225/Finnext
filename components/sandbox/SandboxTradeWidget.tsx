@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FlaskConical, Loader2, DollarSign, Wallet, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import { FlaskConical, Loader2, Wallet, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { toast } from 'sonner';
 

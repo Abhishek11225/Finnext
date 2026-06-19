@@ -8,13 +8,11 @@ import {
   BookOpen,
   Bot,
   CheckCircle2,
-  ChevronRight,
   CirclePlay,
   Clock3,
   GraduationCap,
   Loader2,
   Lock,
-  Play,
   Send,
   Unlock,
   Sparkles,
@@ -171,7 +169,7 @@ export default function AcademyPage() {
 
   if (error) {
     return (
-      <main className="academy-container">
+      <div className="academy-container">
         <div className="academy-card error-card">
           <h1 className="academy-title">Academy</h1>
           <p className="error-text">{error}</p>
@@ -179,17 +177,17 @@ export default function AcademyPage() {
             Retry
           </button>
         </div>
-      </main>
+      </div>
     );
   }
 
   if (!academy || !selectedLevel || !selectedLesson) {
     return (
-      <main className="academy-container">
+      <div className="academy-container">
         <div className="academy-loader">
           <Loader2 size={32} className="spin-animation" />
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -197,7 +195,7 @@ export default function AcademyPage() {
   const isLastLessonOfLevel = selectedLevel.lessons[selectedLevel.lessons.length - 1].slug === selectedLesson.slug;
 
   return (
-    <main className="academy-container">
+    <div className="academy-container">
       {/* Top Header & Progress */}
       <section className="academy-header-section">
         <div className="academy-header-info">
@@ -414,6 +412,6 @@ export default function AcademyPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

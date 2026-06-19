@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { toast } from 'sonner';
 import { Eye, EyeOff, Lock, Mail, ArrowRight, Loader2 } from 'lucide-react';
 import { signInWithEmail } from '@/lib/actions/auth.actions';

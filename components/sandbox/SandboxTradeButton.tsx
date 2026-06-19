@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FlaskConical, Loader2, CheckCircle2, XCircle, TrendingUp, TrendingDown } from 'lucide-react';
+import { Loader2, CheckCircle2, XCircle, TrendingUp, TrendingDown } from 'lucide-react';
 
 interface SandboxTradeButtonProps {
   ticker: string;

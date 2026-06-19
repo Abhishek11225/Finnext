@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 
 /**
  * DEBUG endpoint — call this to see the raw response from the Groww API.
@@ -7,7 +7,8 @@ import { auth } from "@/lib/better-auth/auth";
  * Remove this route before production deployment.
  */
 export async function GET(req: NextRequest) {
-  const session = await auth.api.getSession({ headers: req.headers });
+  const auth = await getAuth();
+    const session = await auth.api.getSession({ headers: req.headers });
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const token = req.nextUrl.searchParams.get("token");

@@ -184,7 +184,7 @@ export default function AssistantPage() {
   };
 
   return (
-    <main className="assistant-container">
+    <div className="assistant-container">
 
       {/* Header */}
       <div className="assistant-header">
@@ -590,6 +590,6 @@ export default function AssistantPage() {
         </div>
       )}
 
-    </main>
+    </div>
   );
 }

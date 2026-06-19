@@ -15,6 +15,10 @@ export async function nvidiaChat(
   userMessage: string,
   maxTokens = 1500
 ): Promise<string> {
+  if (!process.env.NVIDIA_API_KEY) {
+    throw new Error("NVIDIA_API_KEY is not configured.");
+  }
+
   const res = await fetch(`${NVIDIA_BASE_URL}/chat/completions`, {
     method: "POST",
     headers: {
@@ -31,6 +35,7 @@ export async function nvidiaChat(
       temperature: 0.7,
       top_p: 0.95,
     }),
+    signal: AbortSignal.timeout(30_000),
   });
 
   if (!res.ok) {
@@ -39,5 +44,11 @@ export async function nvidiaChat(
   }
 
   const data = await res.json();
-  return data.choices?.[0]?.message?.content ?? "";
+  const content = data?.choices?.[0]?.message?.content;
+
+  if (typeof content !== "string" || !content.trim()) {
+    throw new Error("NVIDIA NIM returned an empty response.");
+  }
+
+  return content;
 }

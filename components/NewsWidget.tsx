@@ -1,7 +1,6 @@
 'use client';
 
 import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
-import useTradingViewWidget from '@/hooks/useTradingViewWidget';
 import { TOP_STORIES_WIDGET_CONFIG } from '@/lib/constants';
 import { X, ExternalLink, Loader2, Newspaper } from 'lucide-react';
 

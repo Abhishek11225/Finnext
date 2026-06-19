@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { auth } from '@/lib/better-auth/auth';
+import { getAuth } from '@/lib/better-auth/auth';
 import { connectToDatabase } from '@/database/mongoose';
 import { Profile } from '@/database/models/Profile';
 import { ExternalPortfolio, IExternalAsset } from '@/database/models/ExternalPortfolio';
@@ -30,6 +30,7 @@ Rules:
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
@@ -88,6 +89,12 @@ export async function POST(req: NextRequest) {
       message,
     ].join('\n');
 
+    if (!process.env.NVIDIA_API_KEY && !process.env.GROQ_API_KEY) {
+      return NextResponse.json({
+        message: 'The Academy tutor is not configured yet. Please add an AI provider key and try again.',
+      });
+    }
+
     const reply = process.env.NVIDIA_API_KEY
       ? await nvidiaChat(SYSTEM_PROMPT, context, 900)
       : await groqChat(SYSTEM_PROMPT, context, 900);
@@ -95,6 +102,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: reply });
   } catch (error) {
     console.error('Academy assistant failed:', error);
-    return NextResponse.json({ error: 'Academy assistant is unavailable right now.' }, { status: 500 });
+    return NextResponse.json({
+      message: 'The Academy tutor is unavailable right now. Please try again in a moment.',
+    }, { status: 503 });
   }
 }

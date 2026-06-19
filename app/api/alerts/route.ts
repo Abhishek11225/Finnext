@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/database/mongoose";
 import { StockAlert } from "@/database/models/StockAlert";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 
 export async function GET(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -26,6 +27,7 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -56,6 +58,7 @@ export async function POST(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 

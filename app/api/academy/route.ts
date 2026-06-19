@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '@/database/mongoose';
 import { AcademyProgress, IAcademyLessonProgress } from '@/database/models/AcademyProgress';
-import { auth } from '@/lib/better-auth/auth';
+import { getAuth } from '@/lib/better-auth/auth';
 import { academyLessons, academyLevels, formatDuration, getAcademyVideoUrl } from '@/lib/academy';
 
 type AcademyUpdateBody = {
@@ -85,7 +85,8 @@ const buildAcademyPayload = async (userId: string) => {
 };
 
 export async function GET(req: NextRequest) {
-  const session = await auth.api.getSession({ headers: req.headers });
+  const auth = await getAuth();
+    const session = await auth.api.getSession({ headers: req.headers });
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   await connectToDatabase();
@@ -96,6 +97,7 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 

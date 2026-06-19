@@ -80,7 +80,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <main className="profile-container">
+    <div className="profile-container">
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
         <div className="profile-header-icon">
@@ -206,6 +206,6 @@ export default function ProfilePage() {
         {/* Portfolio Import */}
         <UniversalImport />
       </div>
-    </main>
+    </div>
   );
 }

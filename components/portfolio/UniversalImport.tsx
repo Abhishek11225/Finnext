@@ -180,7 +180,11 @@ export function UniversalImport({ onAssetsChange }: UniversalImportProps) {
       </div>
 
       {/* Asset table */}
-      {assets.length > 0 && (
+      {isLoading ? (
+        <div style={{ color: '#9095A1', fontSize: 13, padding: '16px 0' }}>
+          Loading portfolio...
+        </div>
+      ) : assets.length > 0 && (
         <div style={{ overflowX: 'auto', marginBottom: 16 }}>
           <table style={{ width: '100%', minWidth: 500, borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>

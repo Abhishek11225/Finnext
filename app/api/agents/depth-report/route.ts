@@ -4,7 +4,7 @@ import { ExternalPortfolio } from "@/database/models/ExternalPortfolio";
 import { Sandbox } from "@/database/models/Sandbox";
 import { Profile } from "@/database/models/Profile";
 import { nvidiaChat } from "@/lib/nvidia";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 
 const SYSTEM_PROMPT_GENERATOR = `You are a world-class portfolio manager and financial risk auditor powered by FinNext AI.
 Analyze the user's real portfolio and virtual sandbox positions, and generate a comprehensive depth report.
@@ -59,6 +59,7 @@ Do NOT use technical jargon, do NOT output markdown code fences (like \`\`\`json
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

@@ -26,6 +26,7 @@ export async function groqChat(
       temperature: 0.45,
       top_p: 0.9,
     }),
+    signal: AbortSignal.timeout(30_000),
   });
 
   if (!res.ok) {
@@ -34,5 +35,11 @@ export async function groqChat(
   }
 
   const data = await res.json();
-  return data.choices?.[0]?.message?.content ?? '';
+  const content = data?.choices?.[0]?.message?.content;
+
+  if (typeof content !== 'string' || !content.trim()) {
+    throw new Error('Groq API returned an empty response.');
+  }
+
+  return content;
 }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { nvidiaChat } from "@/lib/nvidia";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 import { connectToDatabase } from "@/database/mongoose";
 import { Profile } from "@/database/models/Profile";
 import { ExternalPortfolio } from "@/database/models/ExternalPortfolio";
@@ -14,7 +14,6 @@ import {
   runScreenerAgent,
   runRecommendationAgent,
   runTradingAgentsAnalysis,
-  extractPrimaryTicker,
   type PortfolioAsset,
   type UserProfile,
 } from "@/lib/agents/specialists";
@@ -81,6 +80,7 @@ function extractTickersFromMessage(message: string): string[] {
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     const { message } = await req.json();
 
@@ -195,6 +195,13 @@ export async function POST(req: NextRequest) {
     contextString += `\n=== USER MESSAGE ===\n${message}`;
 
     // ── 5. Synthesize final response ──────────────────────────────────────────
+    if (!process.env.NVIDIA_API_KEY) {
+      return NextResponse.json({
+        message: "The AI assistant is not configured yet. Please add NVIDIA_API_KEY in the deployment environment.",
+        dashboardAction: { action: "NONE", payload: null },
+      }, { status: 503 });
+    }
+
     const rawText = await nvidiaChat(SYNTHESIZER_PROMPT, contextString, 2000);
 
     // ── 6. Parse & return ─────────────────────────────────────────────────────
@@ -211,6 +218,9 @@ export async function POST(req: NextRequest) {
     }
   } catch (err) {
     console.error("[Orchestrator] Fatal error:", err);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json({
+      message: "The AI assistant is unavailable right now. Please try again in a moment.",
+      dashboardAction: { action: "NONE", payload: null },
+    }, { status: 503 });
   }
 }

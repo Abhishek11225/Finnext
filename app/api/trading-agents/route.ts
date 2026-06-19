@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/better-auth/auth";
 
 /**
  * POST /api/trading-agents
@@ -14,9 +13,6 @@ const TRADING_AGENTS_URL =
 
 export async function POST(req: NextRequest) {
   try {
-    // Auth check (optional — unauthenticated users still get analysis, just no risk profile)
-    const session = await auth.api.getSession({ headers: req.headers });
-
     const body = await req.json();
     const { ticker, date, riskTolerance } = body;
 

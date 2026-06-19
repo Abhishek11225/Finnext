@@ -1,7 +1,7 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { auth } from '../better-auth/auth';
+import { getAuth } from '../better-auth/auth';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { getStocksDetails } from '../actions/finnhub.actions';
@@ -15,6 +15,7 @@ export const addToWatchlist = async (symbol: string, company: string) => {
   try {
     await connectToDatabase();
 
+    const auth = await getAuth();
     const session = await auth.api.getSession({
       headers: await headers(),
     });
@@ -55,6 +56,7 @@ export const removeFromWatchlist = async (symbol: string) => {
   try {
     await connectToDatabase();
 
+    const auth = await getAuth();
     const session = await auth.api.getSession({
       headers: await headers(),
     });
@@ -109,6 +111,7 @@ export async function getWatchlistSymbolsByEmail(email: string): Promise<string[
 // Get user's watchlist
 export const getUserWatchlist = async () => {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({
       headers: await headers(),
     });
@@ -128,6 +131,7 @@ export const getUserWatchlist = async () => {
 // Get user's watchlist with stock data
 export const getWatchlistWithData = async () => {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({
       headers: await headers(),
     });

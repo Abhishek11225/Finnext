@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import { Bell, BellRing, Loader2, Trash2 } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 
@@ -20,13 +20,7 @@ export function StockAlertButton({ symbol, currentPrice = 0, iconOnly = false }:
   const [targetPrice, setTargetPrice] = useState<string>(currentPrice.toString() || '');
   const [condition, setCondition] = useState<'ABOVE' | 'BELOW'>('ABOVE');
 
-  useEffect(() => {
-    if (isOpen) {
-      fetchAlerts();
-    }
-  }, [isOpen]);
-
-  const fetchAlerts = async () => {
+  const fetchAlerts = useCallback(async () => {
     setFetching(true);
     try {
       const res = await fetch(`/api/alerts?symbol=${symbol}`);
@@ -38,7 +32,13 @@ export function StockAlertButton({ symbol, currentPrice = 0, iconOnly = false }:
       console.error(e);
     }
     setFetching(false);
-  };
+  }, [symbol]);
+
+  useEffect(() => {
+    if (isOpen) {
+      fetchAlerts();
+    }
+  }, [fetchAlerts, isOpen]);
 
   const handleCreateAlert = async (e: React.FormEvent) => {
     e.preventDefault();

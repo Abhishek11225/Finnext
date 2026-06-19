@@ -37,7 +37,7 @@ function MessageText({ text }: { text: string }) {
   );
 }
 
-export function Chatbot({ portfolioTickers = [], onDashboardAction, fullPage = false }: ChatbotProps) {
+export function Chatbot({ onDashboardAction, fullPage = false }: ChatbotProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',

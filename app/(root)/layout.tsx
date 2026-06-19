@@ -1,11 +1,17 @@
 import Header from "@/components/Header";
-import {auth} from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 import {headers} from "next/headers";
 import {redirect} from "next/navigation";
 import {LiveAlertTracker} from "@/components/alerts/LiveAlertTracker";
 
 const Layout = async ({ children }: { children : React.ReactNode }) => {
-    const session = await auth.api.getSession({ headers: await headers() });
+    const requestHeaders = await headers();
+    const hasSessionCookie = Boolean(requestHeaders.get('cookie'));
+
+    if(!hasSessionCookie) redirect('/sign-in');
+
+    const auth = await getAuth();
+    const session = await auth.api.getSession({ headers: requestHeaders });
 
     if(!session?.user) redirect('/sign-in');
 
@@ -16,14 +22,14 @@ const Layout = async ({ children }: { children : React.ReactNode }) => {
     }
 
     return (
-        <main className="min-h-screen text-gray-400">
+        <div className="min-h-screen text-gray-400">
             <LiveAlertTracker />
             <Header user={user} />
 
-            <div className="container py-10">
+            <main className="container py-10">
                 {children}
-            </div>
-        </main>
+            </main>
+        </div>
     )
 }
 export default Layout

@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/database/mongoose";
 import { StockAlert } from "@/database/models/StockAlert";
-import { auth } from "@/lib/better-auth/auth";
+import { getAuth } from "@/lib/better-auth/auth";
 import { sendStockAlertEmail } from "@/lib/nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = await getAuth();
     const session = await auth.api.getSession({ headers: req.headers });
     if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 

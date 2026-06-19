@@ -1,11 +1,15 @@
 import nodemailer from 'nodemailer';
 import {WELCOME_EMAIL_TEMPLATE, NEWS_SUMMARY_EMAIL_TEMPLATE, STOCK_ALERT_LOWER_EMAIL_TEMPLATE, STOCK_ALERT_UPPER_EMAIL_TEMPLATE} from "@/lib/nodemailer/templates";
+import { getOptionalEnv } from '@/lib/env';
+
+const emailUser = getOptionalEnv('NODEMAILER_EMAIL');
+const emailPassword = getOptionalEnv('NODEMAILER_PASSWORD');
 
 export const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.NODEMAILER_EMAIL!,
-        pass: process.env.NODEMAILER_PASSWORD!,
+        user: emailUser,
+        pass: emailPassword,
     }
 })
 
@@ -20,13 +24,6 @@ export const sendWelcomeEmail = async ({ email, name, intro }: WelcomeEmailData)
         subject: `Welcome to FinNext - your stock market toolkit is ready!`,
         text: 'Thanks for joining FinNext',
         html: htmlTemplate,
-        attachments: [
-            {
-                filename: 'dashboard.png',
-                path: 'd:/kantik/finnext/public/assets/images/dashboard.png',
-                cid: 'dashboard',
-            },
-        ],
     }
 
     await transporter.sendMail(mailOptions);
