@@ -13,7 +13,7 @@ import { cache } from 'react';
 import { getAuth } from '../better-auth/auth';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { getWatchlistSymbolsByEmail } from './watchlist.actions';
+import { getWatchlistSymbolsByEmail } from './watchlist-queries';
 
 
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';

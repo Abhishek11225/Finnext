@@ -71,6 +71,7 @@ declare global {
         id: string;
         name: string;
         email: string;
+        role?: 'user' | 'professional';
     };
 
     type Stock = {

@@ -78,7 +78,7 @@ const topicsByLevel = {
 };
 
 export const academyLessons: AcademyLessonSeed[] = academyLevels.flatMap((level) =>
-  topicsByLevel[level.name].map(([title, description], index) => {
+  topicsByLevel[level.name].map(([title, description]) => {
     const slug = slugify(title);
 
     return {

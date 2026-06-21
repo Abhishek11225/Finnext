@@ -17,6 +17,15 @@ function createAuth(db: mongo.Db) {
     database: mongodbAdapter(db as unknown as BetterAuthMongoDb),
     secret: getEnv("BETTER_AUTH_SECRET"),
     baseURL: getEnv("BETTER_AUTH_URL"),
+    user: {
+      additionalFields: {
+        role: {
+          type: "string",
+          required: false,
+          defaultValue: "user",
+        },
+      },
+    },
     emailAndPassword: {
       enabled: true,
       disableSignUp: false,

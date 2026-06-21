@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/database/mongoose";
 import { Profile } from "@/database/models/Profile";
+import { User } from "@/database/models/User";
 import { getAuth } from "@/lib/better-auth/auth";
 
 export async function GET(req: NextRequest) {
@@ -13,7 +14,13 @@ export async function GET(req: NextRequest) {
   if (!profile) {
     profile = await Profile.create({ userId: session.user.id });
   }
-  return NextResponse.json(profile);
+  const user = await User.findById(session.user.id);
+  
+  return NextResponse.json({
+    ...profile.toObject(),
+    role: user?.role || "user",
+    professionalProfile: user?.professionalProfile || null,
+  });
 }
 
 export async function POST(req: NextRequest) {

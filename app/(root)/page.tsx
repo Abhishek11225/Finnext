@@ -1,5 +1,6 @@
 import TradingViewWidget from "@/components/TradingViewWidget";
 import NewsWidget from "@/components/NewsWidget";
+import MyMentorships from "@/components/MyMentorships";
 import {
     HEATMAP_WIDGET_CONFIG,
     MARKET_DATA_WIDGET_CONFIG,
@@ -19,6 +20,8 @@ const Home = () => {
 
     return (
         <div className="flex flex-col min-h-screen p-4 md:p-8" style={{ gap: 24 }}>
+            <MyMentorships />
+
             {/* Top Row: Market Overview & Heatmap */}
             <section className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: 20 }}>
                 <div className="lg:col-span-1" style={{ height: 620 }}>
@@ -66,4 +69,3 @@ const Home = () => {
 }
 
 export default Home;
-
